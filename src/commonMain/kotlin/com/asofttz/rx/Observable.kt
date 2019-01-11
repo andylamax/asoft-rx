@@ -4,11 +4,8 @@ import kotlin.properties.Delegates
 import kotlin.reflect.KProperty
 
 class Observable<T : Any?>(initialValue: T) {
-
     var value: T by Delegates.observable(initialValue) { _, old, new ->
-        observers.forEach {
-            it(old, new)
-        }
+        dispatch(old, new)
     }
 
     private val observers = mutableListOf<(T, T) -> Unit>()
@@ -21,8 +18,12 @@ class Observable<T : Any?>(initialValue: T) {
         try {
             observers.remove(observer)
         } catch (e: Exception) {
-            throw IndexOutOfBoundsException("Can not unobserve an observer that was'nt ser")
+            throw Exception("Can not unobserve an observer that was'nt set")
         }
+    }
+
+    private fun dispatch(oldValue: T = value, newValue: T = value) = observers.forEach {
+        it(oldValue, newValue)
     }
 
     operator fun getValue(thisRef: Any?, property: KProperty<*>): T = value
