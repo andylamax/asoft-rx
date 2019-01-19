@@ -8,13 +8,13 @@ class Observable<T : Any?>(initialValue: T) {
         dispatch(old, new)
     }
 
-    private val observers = mutableListOf<(T, T) -> Unit>()
+    private val observers = mutableListOf<Observer<T>>()
 
-    fun observe(onChange: (oldValue: T, newValue: T) -> Unit) = onChange.apply {
+    fun observe(onChange: (oldValue: T, newValue: T) -> Unit): Observer<T> = onChange.apply {
         observers.add(this)
     }
 
-    fun unObserve(observer: (T, T) -> Unit) {
+    fun unObserve(observer: Observer<T>) {
         try {
             observers.remove(observer)
         } catch (e: Exception) {

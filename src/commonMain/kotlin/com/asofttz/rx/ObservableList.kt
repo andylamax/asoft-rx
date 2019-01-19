@@ -9,13 +9,13 @@ class ObservableList<T : Any?>(vararg initialValues: T) {
             field = value
         }
 
-    private val observers = mutableListOf<(MutableList<T>, MutableList<T>) -> Unit>()
+    private val observers = mutableListOf<ListObserver<T>>()
 
-    fun observe(onChange: (oldValue: MutableList<T>, newValue: MutableList<T>) -> Unit) = onChange.apply {
+    fun observe(onChange: (oldValue: MutableList<T>, newValue: MutableList<T>) -> Unit): ListObserver<T> = onChange.apply {
         observers.add(this)
     }
 
-    fun unObserve(observer: (MutableList<T>, MutableList<T>) -> Unit) {
+    fun unObserve(observer: ListObserver<T>) {
         try {
             observers.remove(observer)
         } catch (e: Exception) {
