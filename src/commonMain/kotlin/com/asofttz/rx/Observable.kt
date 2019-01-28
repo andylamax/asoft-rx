@@ -12,6 +12,7 @@ class Observable<T : Any?>(initialValue: T) {
 
     fun observe(onChange: (oldValue: T, newValue: T) -> Unit): Observer<T> = onChange.apply {
         observers.add(this)
+        onChange(value, value)
     }
 
     fun unObserve(observer: Observer<T>) {
