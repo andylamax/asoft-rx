@@ -29,6 +29,10 @@ class ObservableList<T : Any?>(vararg initialValues: T) {
 
     operator fun getValue(thisRef: Any?, property: KProperty<*>): MutableList<T> = value
 
+    operator fun get(index: Int) = value[index]
+
+    val size: Int get() = value.size
+
     fun add(element: T) = value.add(element).also { dispatch() }
 
     fun remove(element: T) = value.remove(element).also { dispatch() }
