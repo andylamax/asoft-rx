@@ -13,6 +13,7 @@ class ObservableList<T : Any?>(vararg initialValues: T) {
 
     fun observe(onChange: (oldValue: MutableList<T>, newValue: MutableList<T>) -> Unit): ListObserver<T> = onChange.apply {
         observers.add(this)
+        onChange(value,value)
     }
 
     fun unObserve(observer: ListObserver<T>) {
