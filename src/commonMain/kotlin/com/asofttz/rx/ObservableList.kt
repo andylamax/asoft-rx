@@ -13,7 +13,16 @@ class ObservableList<T : Any?>(vararg initialValues: T) {
 
     fun observe(onChange: (oldValue: MutableList<T>, newValue: MutableList<T>) -> Unit): ListObserver<T> = onChange.apply {
         observers.add(this)
-        onChange(value,value)
+        onChange(value, value)
+    }
+
+    fun observe(onChange: (value: MutableList<T>) -> Unit): ListObserver<T> {
+        val lobserver = { oldValue: MutableList<T>, newValue: MutableList<T> ->
+            onChange(newValue)
+        }
+        onChange(value)
+        observers.add(lobserver)
+        return lobserver
     }
 
     fun unObserve(observer: ListObserver<T>) {
