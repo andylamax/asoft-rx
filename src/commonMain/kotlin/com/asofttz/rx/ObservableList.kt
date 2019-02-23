@@ -11,11 +11,21 @@ class ObservableList<T : Any?>(vararg initialValues: T) {
 
     private val observers = mutableListOf<ListObserver<T>>()
 
+    private val subscribers = mutableListOf<Subscriber<T>>()
+
+    @Deprecated("use subscribe instead")
     fun observe(onChange: (oldValue: MutableList<T>, newValue: MutableList<T>) -> Unit): ListObserver<T> = onChange.apply {
         observers.add(this)
         onChange(value, value)
     }
 
+    fun subscribe(onChange: (MutableList<T>) -> Unit) = Subscriber(subscribers).apply {
+        callback = onChange
+        onChange(value)
+        subscribers.add(this)
+    }
+
+    @Deprecated("use subscribe instead")
     fun observe(onChange: (value: MutableList<T>) -> Unit): ListObserver<T> {
         val lobserver = { oldValue: MutableList<T>, newValue: MutableList<T> ->
             onChange(newValue)
@@ -25,6 +35,7 @@ class ObservableList<T : Any?>(vararg initialValues: T) {
         return lobserver
     }
 
+    @Deprecated("use subscriber.cancel() instead")
     fun unObserve(observer: ListObserver<T>) {
         try {
             observers.remove(observer)
@@ -33,8 +44,13 @@ class ObservableList<T : Any?>(vararg initialValues: T) {
         }
     }
 
-    private fun dispatch(oldValue: MutableList<T> = value, newValue: MutableList<T> = value) = observers.forEach {
-        it(oldValue, newValue)
+    private fun dispatch(oldValue: MutableList<T> = value, newValue: MutableList<T> = value) {
+        subscribers.forEach {
+            it(value)
+        }
+        observers.forEach {
+            it(oldValue, newValue)
+        }
     }
 
     operator fun getValue(thisRef: Any?, property: KProperty<*>): MutableList<T> = value
