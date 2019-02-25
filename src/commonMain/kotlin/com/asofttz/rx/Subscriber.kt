@@ -1,9 +1,9 @@
 package com.asofttz.rx
 
 class Subscriber<T>(private var container: MutableList<Subscriber<T>> = mutableListOf()) {
-    internal var callback: (MutableList<T>) -> Unit = { }
+    internal var callback: (T) -> Unit = { }
 
-    operator fun invoke(t: MutableList<T>) {
+    operator fun invoke(t: T) {
         callback(t)
     }
 

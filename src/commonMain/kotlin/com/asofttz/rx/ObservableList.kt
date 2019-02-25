@@ -11,7 +11,7 @@ class ObservableList<T : Any?>(vararg initialValues: T) {
 
     private val observers = mutableListOf<ListObserver<T>>()
 
-    private val subscribers = mutableListOf<Subscriber<T>>()
+    private val subscribers = mutableListOf<Subscriber<MutableList<T>>>()
 
     @Deprecated("use subscribe instead")
     fun observe(onChange: (oldValue: MutableList<T>, newValue: MutableList<T>) -> Unit): ListObserver<T> = onChange.apply {
@@ -44,7 +44,7 @@ class ObservableList<T : Any?>(vararg initialValues: T) {
         }
     }
 
-    private fun dispatch(oldValue: MutableList<T> = value, newValue: MutableList<T> = value) {
+    fun dispatch(oldValue: MutableList<T> = value, newValue: MutableList<T> = value) {
         subscribers.forEach {
             it(value)
         }
