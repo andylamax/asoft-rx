@@ -3,7 +3,7 @@ package com.asofttz.rx
 import kotlin.properties.Delegates
 import kotlin.reflect.KProperty
 
-class Observable<T : Any?>(initialValue: T) {
+open class Observable<T : Any?>(initialValue: T) {
     var value: T by Delegates.observable(initialValue) { _, old, new ->
         dispatch(old, new)
     }
