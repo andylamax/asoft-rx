@@ -1,7 +1,6 @@
 package com.asofttz.rx
 
 import kotlin.properties.Delegates
-import kotlin.reflect.KProperty
 
 open class Observable<T : Any?>(initialValue: T) {
     var value: T by Delegates.observable(initialValue) { _, old, new ->
@@ -41,6 +40,4 @@ open class Observable<T : Any?>(initialValue: T) {
             it(oldValue, newValue)
         }
     }
-
-    operator fun getValue(thisRef: Any?, property: KProperty<*>): T = value
 }

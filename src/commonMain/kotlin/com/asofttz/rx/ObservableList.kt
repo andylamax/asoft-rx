@@ -2,7 +2,7 @@ package com.asofttz.rx
 
 import kotlin.reflect.KProperty
 
-class ObservableList<T : Any?>(vararg initialValues: T) {
+open class ObservableList<T : Any?>(vararg initialValues: T) {
     var value = initialValues.asList().toMutableList()
         set(value) {
             dispatch(field, value)
