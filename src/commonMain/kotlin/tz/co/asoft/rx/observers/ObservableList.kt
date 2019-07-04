@@ -1,5 +1,6 @@
-package com.asofttz.rx
+package tz.co.asoft.rx.observers
 
+import tz.co.asoft.rx.subscriber.Subscriber
 import kotlin.reflect.KProperty
 
 open class ObservableList<T : Any?>(vararg initialValues: T) {
@@ -9,15 +10,7 @@ open class ObservableList<T : Any?>(vararg initialValues: T) {
             field = value
         }
 
-    private val observers = mutableListOf<ListObserver<T>>()
-
     private val subscribers = mutableListOf<Subscriber<MutableList<T>>>()
-
-    @Deprecated("use subscribe instead")
-    fun observe(onChange: (oldValue: MutableList<T>, newValue: MutableList<T>) -> Unit): ListObserver<T> = onChange.apply {
-        observers.add(this)
-        onChange(value, value)
-    }
 
     fun subscribe(onChange: (MutableList<T>) -> Unit) = Subscriber(subscribers).apply {
         callback = onChange
@@ -25,30 +18,14 @@ open class ObservableList<T : Any?>(vararg initialValues: T) {
         subscribers.add(this)
     }
 
-    @Deprecated("use subscribe instead")
-    fun observe(onChange: (value: MutableList<T>) -> Unit): ListObserver<T> {
-        val lobserver = { oldValue: MutableList<T>, newValue: MutableList<T> ->
-            onChange(newValue)
-        }
-        onChange(value)
-        observers.add(lobserver)
-        return lobserver
-    }
-
-    @Deprecated("use subscriber.cancel() instead")
-    fun unObserve(observer: ListObserver<T>) {
-        try {
-            observers.remove(observer)
-        } catch (e: Exception) {
-            throw Exception("Can not unobserve an observer that was'nt set")
-        }
+    fun subscribe(onChange: (old: MutableList<T>, new: MutableList<T>) -> Unit) = Subscriber(subscribers).apply {
+        oldNewCallback = onChange
+        onChange(value, value)
+        subscribers.add(this)
     }
 
     fun dispatch(oldValue: MutableList<T> = value, newValue: MutableList<T> = value) {
         subscribers.forEach {
-            it(value)
-        }
-        observers.forEach {
             it(oldValue, newValue)
         }
     }
