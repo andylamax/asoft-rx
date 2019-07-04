@@ -16,7 +16,6 @@ repositories {
 }
 
 group 'tz.co.asoft'
-group 'github.andylamax.asoft-rx'
 version '2.0.0'
 
 apply plugin: 'maven-publish'
