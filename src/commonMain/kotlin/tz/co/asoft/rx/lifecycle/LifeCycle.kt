@@ -1,9 +1,25 @@
 package tz.co.asoft.rx.lifecycle
 
-interface LifeCycle {
-    var state: State
+class LifeCycle {
+    var state: State = State.CREATED
+        get
+        private set
 
-    enum class State {
-        STARTED, ACTIVE, INACTIVE, FINISHED
+    internal val observers = mutableSetOf<Observer<*>>()
+
+    enum class State { CREATED, RUNNING, STOPPED, FINISHED }
+
+    fun start() {
+        state = State.RUNNING
+        observers.forEach { it.awake() }
+    }
+
+    fun stop() {
+        state = State.STOPPED
+    }
+
+    fun finish() {
+        observers.forEach { it.cancel() }
+        state = State.FINISHED
     }
 }

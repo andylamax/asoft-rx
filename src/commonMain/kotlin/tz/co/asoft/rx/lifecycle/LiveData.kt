@@ -10,20 +10,22 @@ class LiveData<T : Any?>(initialValue: T) {
     private val observers = mutableMapOf<LifeCycle, Observer<T>>()
 
     fun observe(lifeCycle: LifeCycle, onChange: (value: T) -> Unit) = Observer(lifeCycle, observers).apply {
-        callback = onChange
-        onChange(value)
-        observers[lifeCycle] = this
-    }
-
-    fun subscribeForOldAndNew(lifeCycle: LifeCycle, onChange: (old: T, new: T) -> Unit) = Observer(lifeCycle, observers).apply {
-        oldNewCallback = onChange
-        onChange(value, value)
-        observers[lifeCycle] = this
+        if (lifeCycle.state != LifeCycle.State.FINISHED) {
+            callback = onChange
+            if (lifeCycle.state == LifeCycle.State.RUNNING) {
+                onChange(value)
+            }
+            liveData = this@LiveData
+            observers[lifeCycle] = this
+            lifeCycle.observers.add(this)
+        }
     }
 
     fun dispatch(oldValue: T = value, newValue: T = value) {
-        observers.values.forEach {
-            it(oldValue, newValue)
+        observers.forEach { (lifeCycle, observer) ->
+            if (lifeCycle.state == LifeCycle.State.RUNNING) {
+                observer(oldValue, newValue)
+            }
         }
     }
 }

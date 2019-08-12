@@ -2,12 +2,14 @@ package tz.co.asoft.rx.lifecycle
 
 class Observer<T>(private val lifeCycle: LifeCycle, private val container: MutableMap<LifeCycle, Observer<T>>) {
 
+    internal var liveData: LiveData<T>? = null
+
     internal var callback: ((T) -> Unit)? = null
     internal var oldNewCallback: ((T, T) -> Unit)? = null
 
-    operator fun invoke(o: T, n: T) {
+    internal operator fun invoke(o: T, n: T) {
         when (lifeCycle.state) {
-            LifeCycle.State.ACTIVE -> {
+            LifeCycle.State.RUNNING -> {
                 callback?.invoke(n)
                 oldNewCallback?.invoke(o, n)
             }
@@ -17,6 +19,10 @@ class Observer<T>(private val lifeCycle: LifeCycle, private val container: Mutab
             else -> {
             }
         }
+    }
+
+    internal fun awake() {
+        liveData?.value?.let { invoke(it, it) }
     }
 
     fun cancel() = container.remove(lifeCycle)
