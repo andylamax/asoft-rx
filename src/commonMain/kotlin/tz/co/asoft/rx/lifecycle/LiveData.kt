@@ -21,11 +21,32 @@ class LiveData<T : Any?>(initialValue: T) {
         }
     }
 
+    fun observeForever(onChange: (value: T) -> Unit): Observer<T> {
+        val lc = LifeCycle().apply {
+            start()
+        }
+        return observe(lc, onChange)
+    }
+
     fun dispatch(oldValue: T = value, newValue: T = value) {
         observers.forEach { (lifeCycle, observer) ->
             if (lifeCycle.state == LifeCycle.State.RUNNING) {
                 observer(oldValue, newValue)
             }
+        }
+    }
+
+    fun <S : Any?> map(onChange: (value: T) -> S): LiveData<S> = LiveData(onChange(value)).also { ld ->
+        observeForever { ld.value = onChange(it) }
+    }
+
+    fun <S : Any?> addSource(src: LiveData<S>, transform: (S) -> T) = src.observeForever {
+        value = transform(it)
+    }
+
+    companion object {
+        fun <T : Any?> observing(liveData: LiveData<T>) = LiveData(liveData.value).apply {
+            liveData.observeForever { value = it }
         }
     }
 }

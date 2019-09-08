@@ -1,8 +1,8 @@
 buildscript {
     ext {
-        kotlin_version = "1.3.41"
+        kotlin_version = "1.3.50"
         asoft_test_version = "1.0.0"
-        coroutines_version = "1.2.2"
+        coroutines_version = "1.3.0"
     }
 
     repositories {
@@ -18,7 +18,7 @@ buildscript {
 }
 
 plugins {
-    id 'kotlin-multiplatform' version '1.3.41'
+    id 'kotlin-multiplatform' version '1.3.50'
 }
 
 tasks.whenTaskAdded { task ->
@@ -28,7 +28,7 @@ tasks.whenTaskAdded { task ->
 }
 
 group 'tz.co.asoft'
-version "2.1.1"
+version "2.2.0"
 
 apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
@@ -65,7 +65,7 @@ repositories {
     maven { url 'https://dl.bintray.com/kotlin/kotlin-js-wrappers' }
     maven { url 'https://dl.bintray.com/kotlinx/kotlinx' }
     maven { url "https://jitpack.io" }
-    maven {url "https://dl.bintray.com/soywiz/soywiz"}
+    maven { url "https://dl.bintray.com/soywiz/soywiz" }
 }
 
 
@@ -85,8 +85,10 @@ kotlin {
             }
         }
     }
-    
+
     js() {
+        browser()
+        nodejs()
         compilations.all {
             tasks[compileKotlinTaskName].kotlinOptions {
                 kotlinOptions.metaInfo = true
