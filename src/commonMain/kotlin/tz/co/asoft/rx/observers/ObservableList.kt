@@ -3,6 +3,7 @@ package tz.co.asoft.rx.observers
 import tz.co.asoft.rx.subscriber.Subscriber
 import kotlin.reflect.KProperty
 
+@Deprecated("Use LiveData<List<T>>")
 open class ObservableList<T : Any?>(vararg initialValues: T) {
     var value = initialValues.asList().toMutableList()
         set(value) {

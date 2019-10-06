@@ -1,5 +1,6 @@
 package tz.co.asoft.rx.subscriber
 
+@Deprecated("Use Observer from LiveData.observe")
 open class Subscriber<T>(private val container: MutableList<Subscriber<T>> = mutableListOf()) {
     internal var callback: ((T) -> Unit)? = null
     internal var oldNewCallback: ((T, T) -> Unit)? = null

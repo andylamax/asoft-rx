@@ -26,8 +26,8 @@ class LiveDataTest {
         lifeCycle.finish()
         livedata.value = "New Value [After start]"
         delay(1000)
-        lifeCycle.stop()
-        livedata.value = "Another value after stop"
+        lifeCycle.pause()
+        livedata.value = "Another value after pause"
         delay(2000)
     }
 
