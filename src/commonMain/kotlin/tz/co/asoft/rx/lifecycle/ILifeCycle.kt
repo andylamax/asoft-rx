@@ -1,28 +1,28 @@
 package tz.co.asoft.rx.lifecycle
 
 interface ILifeCycle {
-    var state: State
+    var lifeState: LifeState
 
     val observers: MutableSet<Observer<*>>
 
-    enum class State { CREATED, RUNNING, PAUSED, FINISHED }
-
+    enum class LifeState { CREATED, RUNNING, PAUSED, FINISHED }
+    
     fun start() {
-        state = State.RUNNING
+        lifeState = LifeState.RUNNING
         observers.forEach { it.awake() }
     }
 
     fun resume() {
-        state = State.RUNNING
+        lifeState = LifeState.RUNNING
     }
 
     fun pause() {
-        state = State.PAUSED
+        lifeState = LifeState.PAUSED
     }
 
     fun finish() {
         observers.forEach { it.cancel() }
         observers.clear()
-        state = State.FINISHED
+        lifeState = LifeState.FINISHED
     }
 }

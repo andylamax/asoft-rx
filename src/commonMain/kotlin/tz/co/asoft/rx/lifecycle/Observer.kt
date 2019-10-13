@@ -8,12 +8,12 @@ class Observer<T>(private val lifeCycle: LifeCycle, private val container: Mutab
     internal var oldNewCallback: ((T, T) -> Unit)? = null
 
     internal operator fun invoke(o: T, n: T) {
-        when (lifeCycle.state) {
-            ILifeCycle.State.RUNNING -> {
+        when (lifeCycle.lifeState) {
+            ILifeCycle.LifeState.RUNNING -> {
                 callback?.invoke(n)
                 oldNewCallback?.invoke(o, n)
             }
-            ILifeCycle.State.FINISHED -> {
+            ILifeCycle.LifeState.FINISHED -> {
                 cancel()
             }
             else -> {
