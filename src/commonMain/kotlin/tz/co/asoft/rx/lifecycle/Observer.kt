@@ -1,6 +1,6 @@
 package tz.co.asoft.rx.lifecycle
 
-class Observer<T>(private val lifeCycle: LifeCycle, private val container: MutableMap<LifeCycle, Observer<T>>) {
+class Observer<T>(private val lifeCycle: ILifeCycle, private val container: MutableMap<ILifeCycle, Observer<T>>) {
 
     internal var liveData: LiveData<T>? = null
 

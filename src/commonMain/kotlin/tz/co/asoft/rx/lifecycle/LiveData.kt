@@ -7,9 +7,9 @@ class LiveData<T : Any?>(initialValue: T) {
         dispatch(old, new)
     }
 
-    private val observers = mutableMapOf<LifeCycle, Observer<T>>()
+    private val observers = mutableMapOf<ILifeCycle, Observer<T>>()
 
-    fun observe(lifeCycle: LifeCycle, onChange: (value: T) -> Unit) = Observer(lifeCycle, observers).apply {
+    fun observe(lifeCycle: ILifeCycle, onChange: (value: T) -> Unit) = Observer(lifeCycle, observers).apply {
         if (lifeCycle.lifeState != ILifeCycle.LifeState.FINISHED) {
             callback = onChange
             if (lifeCycle.lifeState == ILifeCycle.LifeState.RUNNING) {
@@ -36,7 +36,7 @@ class LiveData<T : Any?>(initialValue: T) {
         }
     }
 
-    fun <S : Any?> map(onChange: (value: T) -> S): LiveData<S> = LiveData(onChange(value)).also { ld ->
+    inline fun <S : Any?> map(crossinline onChange: (value: T) -> S): LiveData<S> = LiveData(onChange(value)).also { ld ->
         observeForever { ld.value = onChange(it) }
     }
 

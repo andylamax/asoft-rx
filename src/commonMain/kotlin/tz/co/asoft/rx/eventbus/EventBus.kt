@@ -3,7 +3,8 @@ package tz.co.asoft.rx.eventbus
 import kotlin.reflect.KClass
 
 open class EventBus {
-    protected val eventHandlers = mutableMapOf<KClass<*>, MutableSet<Handler<*>>>()
+    @PublishedApi
+    internal val eventHandlers = mutableMapOf<KClass<*>, MutableSet<Handler<*>>>()
 
     inline fun <reified T : Event> onEvent(noinline action: (T) -> Unit): Handler<T> {
         val handlers = eventHandlers.getOrPut(T::class) { mutableSetOf() }
