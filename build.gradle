@@ -1,9 +1,9 @@
 buildscript {
     ext {
         kotlin_version = "1.3.61"
-        asoft_test_version = "4.0.0"
+        asoft_test_version = "4.1.0"
         coroutines_version = "1.3.3"
-        android_build_tools_version = "3.3.2"
+        android_build_tools_version = "3.5.2"
     }
 
     repositories {
@@ -110,35 +110,29 @@ kotlin {
         }
         commonTest {
             dependencies {
-                implementation kotlin('test-common')
-                implementation kotlin('test-annotations-common')
                 implementation "com.github.andylamax.asoft-test:asoft-test-metadata:$asoft_test_version"
             }
         }
         jvmMain {
             dependencies {
-                implementation kotlin('stdlib-jdk8')
+                implementation kotlin('stdlib')
                 implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
             }
         }
         jvmTest {
             dependencies {
-                implementation kotlin('test')
-                implementation kotlin('test-junit')
                 implementation "com.github.andylamax.asoft-test:asoft-test-jvm:$asoft_test_version"
             }
         }
         androidMain {
             dependencies {
-                implementation kotlin('stdlib-jdk8')
+                implementation kotlin('stdlib')
                 api "androidx.lifecycle:lifecycle-livedata:2.0.0"
                 implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
             }
         }
         androidTest {
             dependencies {
-                implementation kotlin('test')
-                implementation kotlin('test-junit')
                 implementation "com.github.andylamax.asoft-test:asoft-test-android:$asoft_test_version"
             }
         }
@@ -151,7 +145,6 @@ kotlin {
         jsTest {
             dependsOn jsMain
             dependencies {
-                implementation kotlin('test-js')
                 implementation "com.github.andylamax.asoft-test:asoft-test-js:$asoft_test_version"
             }
         }

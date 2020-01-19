@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="asoft-rx:jvmTest" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="tz.co.asoft" external.system.module.type="sourceSet" external.system.module.version="5.0.0" type="JAVA_MODULE" version="4">
+<module external.linked.project.id="asoft-rx:jvmTest" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="tz.co.asoft" external.system.module.type="sourceSet" external.system.module.version="6.0.0" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="kotlin-language" name="Kotlin">
       <configuration version="3" platform="JVM 1.8" allPlatforms="JVM [1.8]" useProjectSettings="false" isTestModule="true" externalProjectId="asoft-rx">
         <dependsOnModuleNames>asoft-rx_commonTest</dependsOnModuleNames>
         <sourceSets>
           <sourceSet>asoft-rx_commonMain</sourceSet>
-          <sourceSet>asoft-rx_commonTest</sourceSet>
           <sourceSet>asoft-rx_jvmMain</sourceSet>
+          <sourceSet>asoft-rx_commonTest</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
         <externalSystemTestTasks>jvmTest|asoft-rx:jvmTest|jvm</externalSystemTestTasks>
@@ -16,7 +16,7 @@
         </compilerSettings>
         <compilerArguments>
           <option name="destination" value="$MODULE_DIR$/build/classes/kotlin/jvm/test" />
-          <option name="classpath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-common/1.3.3/fc4802d1a6ff891f812cbab9e3c00dfb26011bc0/kotlinx-coroutines-core-common-1.3.3.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/1.3.3/5bac48cf5828e9b006f3b1ef6e37d2a70c2e7321/kotlinx-coroutines-core-1.3.3.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.3.61/e91d61b7cfd9a45566b580fef18bbd5c32d505b5/kotlin-stdlib-jdk8-1.3.61.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.61/70dffc5f8ac5ea7c34f30deac5b9d8b1d48af066/kotlin-stdlib-jdk7-1.3.61.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.61/4702105e97f7396ae41b113fdbdc180ec1eb1e36/kotlin-stdlib-1.3.61.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.61/65abb71d5afb850b68be03987b08e2c864ca3110/kotlin-stdlib-common-1.3.61.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.github.andylamax.asoft-test/asoft-test-jvm/3.0.0/c80829c258a32fce740bed90c0685e4d48fb212c/asoft-test-jvm-3.0.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.github.andylamax.asoft-test/asoft-test-metadata/3.0.0/dc9e50101188a9ce2b8cb63da4296a013777cfef/asoft-test-metadata-3.0.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.github.andylamax.asoft-logging/asoft-logging-jvm/5.0.0/ed29235b6ddf909c7f7bb920b6875cd0f586a4c0/asoft-logging-jvm-5.0.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.github.andylamax.asoft-persist/asoft-persist-jvm/11.0.0/89ffd7e69b4eee3c62e66d447d2e1037b1da68ae/asoft-persist-jvm-11.0.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.github.andylamax.asoft-persist/asoft-persist-metadata/11.0.0/6e9949366eab794d9332e825b0a22fd40f0735d7/asoft-persist-metadata-11.0.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.github.andylamax.asoft-rx/asoft-rx-jvm/5.0.0/1d77e2a1b35e835022dd3d7e0a81c6ffb968bad9/asoft-rx-jvm-5.0.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-junit/1.3.61/c04d4425ea7f7fb0c755cf68651f9d25d284837d/kotlin-test-junit-1.3.61.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test/1.3.61/a5931cd3af2c9648e3fa1459fc4968f733aafdb2/kotlin-test-1.3.61.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-common/1.3.61/c243c22f908c91f2ad9dc767080d97dec6a33cc4/kotlin-test-common-1.3.61.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-annotations-common/1.3.61/d62b1dc6be222c383d1b738e10cd1f83c6f8c0d7/kotlin-test-annotations-common-1.3.61.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.soywiz.korlibs.klock/klock-jvm/1.6.0/397cc049835ce9dd5e49e39adf2b35639fca8162/klock-jvm-1.6.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.github.andylamax.asoft-platform/asoft-platform-jvm/3.0.0/24752a85dc585dd297be921ccfa7ece291427b43/asoft-platform-jvm-3.0.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-runtime/0.12.0/418a99564fcb3fa1b278b529238d2cb5a3f80d7d/kotlinx-serialization-runtime-0.12.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-runtime-common/0.12.0/8f59c4d691b8e4f95c46e79133952444a93b8443/kotlinx-serialization-runtime-common-0.12.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.github.andylamax.asoft-logging/asoft-logging-metadata/5.0.0/671d103bfc8d0a91863e18b3cbeea2cab6ec5501/asoft-logging-metadata-5.0.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-java/4.0.0-alpha-2/8f2a279fc4fd4f4ced4acf17501817682f8b2cd7/selenium-java-4.0.0-alpha-2.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.soywiz.korlibs.klock/klock-metadata/1.6.0/55bffd71a4570fc4bb9bea29b96428e384c9677c/klock-metadata-1.6.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-chrome-driver/4.0.0-alpha-2/4c31ebe7c5a5f44c7c953ca4b01d47a39db21774/selenium-chrome-driver-4.0.0-alpha-2.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-edgehtml-driver/4.0.0-alpha-2/4163abaf653816090b5c8993777666f6c6bedf72/selenium-edgehtml-driver-4.0.0-alpha-2.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-firefox-xpi-driver/4.0.0-alpha-2/76b1bb75239178b61da7438f097e4903336e06a9/selenium-firefox-xpi-driver-4.0.0-alpha-2.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-ie-driver/4.0.0-alpha-2/f2a227a86096e7cf3f0900af34ea096ebc7f6307/selenium-ie-driver-4.0.0-alpha-2.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-opera-driver/4.0.0-alpha-2/6e7dac7d83c9d98e6e2e832a404e51d30ee5463/selenium-opera-driver-4.0.0-alpha-2.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-safari-driver/4.0.0-alpha-2/e62373c16751f7a899aa2f0c44ef6aeece77a2ec/selenium-safari-driver-4.0.0-alpha-2.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-support/4.0.0-alpha-2/ea2abcfc8e3456514bd2cb15dabcb765e6d72fce/selenium-support-4.0.0-alpha-2.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.github.andylamax.asoft-rx/asoft-rx-metadata/5.0.0/4306ea3651d122aad86b7f25defecb702ce3983b/asoft-rx-metadata-5.0.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.github.andylamax.asoft-platform/asoft-platform-metadata/3.0.0/52d20b15732c8fc9a77c87e88f18482cacbe35ef/asoft-platform-metadata-3.0.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-edge-driver/4.0.0-alpha-2/b1f2bdcb3594973629c8610d61e251b5497f6115/selenium-edge-driver-4.0.0-alpha-2.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-chromium-driver/4.0.0-alpha-2/975438a10af8c75b2ab3894ab70c09c978d307fc/selenium-chromium-driver-4.0.0-alpha-2.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-firefox-driver/4.0.0-alpha-2/9c12025dd09806002fcc3e81198ea868d737cf55/selenium-firefox-driver-4.0.0-alpha-2.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-remote-driver/4.0.0-alpha-2/f99b149f416151e0abf40fe025bc62acedfa6fe0/selenium-remote-driver-4.0.0-alpha-2.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/4.0.0-alpha-2/4cdcaf8cde67900072b02eb2fdd9878dc88ad737/selenium-api-4.0.0-alpha-2.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.9.12/39050dbbd36862ea87eb9a64158854b04619ccd6/byte-buddy-1.9.12.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-exec/1.3/8dfb9facd0830a27b1b5f29f84593f0aeee7773b/commons-exec-1.3.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/io.opentracing.contrib/opentracing-tracerresolver/0.1.7/2f1b9e8e381ece33df72c0d699b91b405b2839ec/opentracing-tracerresolver-0.1.7.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/27.1-jre/e47b59c893079b87743cdcfb6f17ca95c08c592c/guava-27.1-jre.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.14.0/c3a9efd10f26a802da2c47dbe54a8d4c44a6019f/okhttp-3.14.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/io.opentracing/opentracing-util/0.33.0/132630f17e198a1748f23ce33597efdf4a807fb9/opentracing-util-0.33.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/io.opentracing/opentracing-noop/0.33.0/74b9950a587f53fbdb48c3f1f84f1ece8c10592/opentracing-noop-0.33.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/io.opentracing/opentracing-api/0.33.0/67336cfb9d93779c02e1fda4c87801d352720eda/opentracing-api-0.33.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1dcf1de382a0bf95a3d8b0849546c88bac1292c9/failureaccess-1.0.1.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/2.5.2/cea74543d5904a30861a61b4643a5f2bb372efc4/checker-qual-2.5.2.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.2.0/88e3c593e9b3586e1c6177f89267da6fc6986f0c/error_prone_annotations-2.2.0.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.1/ed28ded51a8b1c6b112568def5f4b455e6809019/j2objc-annotations-1.1.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.17/f97ce6decaea32b36101e37979f8b647f00681fb/animal-sniffer-annotations-1.17.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.17.2/78c7820b205002da4d2d137f6f312bd64b3d6049/okio-1.17.2.jar" />
+          <option name="classpath" value="$MODULE_DIR$/build/classes/kotlin/jvm/main:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-common/1.3.3/fc4802d1a6ff891f812cbab9e3c00dfb26011bc0/kotlinx-coroutines-core-common-1.3.3.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/1.3.3/5bac48cf5828e9b006f3b1ef6e37d2a70c2e7321/kotlinx-coroutines-core-1.3.3.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.61/4702105e97f7396ae41b113fdbdc180ec1eb1e36/kotlin-stdlib-1.3.61.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.61/65abb71d5afb850b68be03987b08e2c864ca3110/kotlin-stdlib-common-1.3.61.jar:/home/andylamax/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
           <option name="moduleName" value="asoft-rx" />
@@ -53,119 +53,12 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/src/jvmTest" />
+    <content url="file://$MODULE_DIR$/src/jvmTest/kotlin" />
+    <content url="file://$MODULE_DIR$/src/jvmTest/resources" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="asoft-rx_commonMain" scope="TEST" />
-    <orderEntry type="library" scope="TEST" name="Gradle: io.opentracing:opentracing-noop:0.33.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.okio:okio:1.17.2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.17" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.j2objc:j2objc-annotations:1.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.errorprone:error_prone_annotations:2.2.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.checkerframework:checker-qual:2.5.2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.code.findbugs:jsr305:3.0.2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.guava:failureaccess:1.0.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: io.opentracing:opentracing-api:0.33.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: io.opentracing:opentracing-util:0.33.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.okhttp3:okhttp:3.14.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.guava:guava:27.1-jre" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: io.opentracing.contrib:opentracing-tracerresolver:0.1.7" level="project" />
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-common/1.3.3/fc4802d1a6ff891f812cbab9e3c00dfb26011bc0/kotlinx-coroutines-core-common-1.3.3.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/1.3.3/5bac48cf5828e9b006f3b1ef6e37d2a70c2e7321/kotlinx-coroutines-core-1.3.3.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.3.61/e91d61b7cfd9a45566b580fef18bbd5c32d505b5/kotlin-stdlib-jdk8-1.3.61.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.61/70dffc5f8ac5ea7c34f30deac5b9d8b1d48af066/kotlin-stdlib-jdk7-1.3.61.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.61/4702105e97f7396ae41b113fdbdc180ec1eb1e36/kotlin-stdlib-1.3.61.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.61/65abb71d5afb850b68be03987b08e2c864ca3110/kotlin-stdlib-common-1.3.61.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" scope="TEST" name="Gradle: org.apache.commons:commons-exec:1.3" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: net.bytebuddy:byte-buddy:1.9.12" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.seleniumhq.selenium:selenium-api:4.0.0-alpha-2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.seleniumhq.selenium:selenium-remote-driver:4.0.0-alpha-2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-rx:asoft-rx-metadata:5.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-platform:asoft-platform-metadata:3.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.seleniumhq.selenium:selenium-firefox-driver:4.0.0-alpha-2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.seleniumhq.selenium:selenium-edge-driver:4.0.0-alpha-2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.seleniumhq.selenium:selenium-chromium-driver:4.0.0-alpha-2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-persist:asoft-persist-metadata:11.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:0.12.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.12.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-rx:asoft-rx-jvm:5.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-platform:asoft-platform-jvm:3.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.seleniumhq.selenium:selenium-support:4.0.0-alpha-2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.seleniumhq.selenium:selenium-safari-driver:4.0.0-alpha-2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.seleniumhq.selenium:selenium-opera-driver:4.0.0-alpha-2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.seleniumhq.selenium:selenium-ie-driver:4.0.0-alpha-2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.seleniumhq.selenium:selenium-firefox-xpi-driver:4.0.0-alpha-2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.seleniumhq.selenium:selenium-edgehtml-driver:4.0.0-alpha-2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.seleniumhq.selenium:selenium-chrome-driver:4.0.0-alpha-2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.soywiz.korlibs.klock:klock-metadata:1.6.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.soywiz.korlibs.klock:klock-jvm:1.6.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-persist:asoft-persist-jvm:11.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.seleniumhq.selenium:selenium-java:4.0.0-alpha-2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-logging:asoft-logging-jvm:5.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.12" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.61" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-logging:asoft-logging-metadata:5.0.0" level="project" />
     <orderEntry type="module-library" scope="RUNTIME">
       <library>
         <CLASSES>
@@ -175,14 +68,8 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-test:asoft-test-jvm:3.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-test-junit:1.3.61" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-test:1.3.61" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.61" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-test:asoft-test-metadata:3.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.3.61" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-test-common:1.3.61" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.61" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.3.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.61" level="project" />
     <orderEntry type="module-library" scope="TEST">
@@ -194,8 +81,35 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module" module-name="asoft-rx_jvmMain" scope="TEST" />
+    <orderEntry type="module-library" scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/build/classes/kotlin/jvm/main" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-common/1.3.3/fc4802d1a6ff891f812cbab9e3c00dfb26011bc0/kotlinx-coroutines-core-common-1.3.3.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/1.3.3/5bac48cf5828e9b006f3b1ef6e37d2a70c2e7321/kotlinx-coroutines-core-1.3.3.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.61/4702105e97f7396ae41b113fdbdc180ec1eb1e36/kotlin-stdlib-1.3.61.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.61/65abb71d5afb850b68be03987b08e2c864ca3110/kotlin-stdlib-common-1.3.61.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntry type="module" module-name="asoft-rx_commonTest" scope="TEST" production-on-test="" />
+    <orderEntry type="module-library" scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-common/1.3.3/fc4802d1a6ff891f812cbab9e3c00dfb26011bc0/kotlinx-coroutines-core-common-1.3.3.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/1.3.3/5bac48cf5828e9b006f3b1ef6e37d2a70c2e7321/kotlinx-coroutines-core-1.3.3.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.61/4702105e97f7396ae41b113fdbdc180ec1eb1e36/kotlin-stdlib-1.3.61.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.61/65abb71d5afb850b68be03987b08e2c864ca3110/kotlin-stdlib-common-1.3.61.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module" module-name="asoft-rx_jvmMain" scope="TEST" />
   </component>
   <component name="TestModuleProperties" production-module="asoft-rx_jvmMain" />
 </module>

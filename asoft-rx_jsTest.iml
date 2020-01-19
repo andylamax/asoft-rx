@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="asoft-rx:jsTest" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="tz.co.asoft" external.system.module.type="sourceSet" external.system.module.version="5.0.0" type="JAVA_MODULE" version="4">
+<module external.linked.project.id="asoft-rx:jsTest" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="tz.co.asoft" external.system.module.type="sourceSet" external.system.module.version="6.0.0" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="kotlin-language" name="Kotlin">
       <configuration version="3" platform="JavaScript " allPlatforms="JS []" useProjectSettings="false" isTestModule="true" externalProjectId="asoft-rx">
         <dependsOnModuleNames>
-          <dependsOn>asoft-rx_commonMain</dependsOn>
           <dependsOn>asoft-rx_commonTest</dependsOn>
+          <dependsOn>asoft-rx_commonMain</dependsOn>
           <dependsOn>asoft-rx_jsMain</dependsOn>
         </dependsOnModuleNames>
         <sourceSets>
           <sourceSet>asoft-rx_commonMain</sourceSet>
-          <sourceSet>asoft-rx_commonTest</sourceSet>
           <sourceSet>asoft-rx_jsMain</sourceSet>
+          <sourceSet>asoft-rx_commonTest</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
-        <externalSystemTestTasks>
-          <externalSystemTestTask>jsBrowserTest|asoft-rx:jsTest|js</externalSystemTestTask>
-          <externalSystemTestTask>jsNodeTest|asoft-rx:jsTest|js</externalSystemTestTask>
-        </externalSystemTestTasks>
         <compilerSettings />
         <compilerArguments>
-          <option name="outputFile" value="$MODULE_DIR$/build/js/packages/asoft-rx-test/kotlin/asoft-rx-test.js" />
+          <option name="outputFile" value="$MODULE_DIR$/build/classes/kotlin/js/test/asoft-rx_test.js" />
           <option name="noStdlib" value="true" />
           <option name="sourceMap" value="true" />
           <option name="metaInfo" value="true" />
@@ -54,65 +50,11 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/src/jsTest" />
+    <content url="file://$MODULE_DIR$/src/jsTest/kotlin" />
+    <content url="file://$MODULE_DIR$/src/jsTest/resources" />
     <orderEntry type="jdk" jdkName="Kotlin SDK" jdkType="KotlinSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="asoft-rx_commonMain" scope="TEST" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.50" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-html-common:0.6.12" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-runtime-js:0.12.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-rx:asoft-rx-js:5.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-platform:asoft-platform-js:3.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-platform:asoft-platform-metadata:3.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-rx:asoft-rx-metadata:5.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains:kotlin-extensions:1.0.1-pre.83-kotlin-1.3.50" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-html-js:0.6.12" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-persist:asoft-persist-js:11.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.soywiz.korlibs.klock:klock-js:1.6.0" level="project" />
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-common/1.3.3/fc4802d1a6ff891f812cbab9e3c00dfb26011bc0/kotlinx-coroutines-core-common-1.3.3.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-js/1.3.3/bc82a570c5f582ed1b9819596718c4a74d873ab3/kotlinx-coroutines-core-js-1.3.3.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-js/1.3.61/7e6dc566af3ebaa2cf6abf227bee7a5c87d54d09/kotlin-stdlib-js-1.3.61.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.61/65abb71d5afb850b68be03987b08e2c864ca3110/kotlin-stdlib-common-1.3.61.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-persist:asoft-persist-metadata:11.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.soywiz.korlibs.klock:klock-metadata:1.6.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:0.12.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains:kotlin-react:16.9.0-pre.83-kotlin-1.3.50" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-logging:asoft-logging-js:5.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-logging:asoft-logging-metadata:5.0.0" level="project" />
     <orderEntry type="module-library" scope="RUNTIME">
       <library>
         <CLASSES>
@@ -122,26 +64,46 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-test:asoft-test-js:3.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-test-js:1.3.61" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-js:1.3.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-js:1.3.61" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.github.andylamax.asoft-test:asoft-test-metadata:3.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.3.61" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-test-common:1.3.61" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.3.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.61" level="project" />
     <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/build/js/packages/asoft-rx/kotlin" />
+          <root url="file://$MODULE_DIR$/build/classes/kotlin/js/main" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module" module-name="asoft-rx_commonTest" scope="TEST" production-on-test="" />
+    <orderEntry type="module-library" scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/build/classes/kotlin/js/main" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-common/1.3.3/fc4802d1a6ff891f812cbab9e3c00dfb26011bc0/kotlinx-coroutines-core-common-1.3.3.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-js/1.3.3/bc82a570c5f582ed1b9819596718c4a74d873ab3/kotlinx-coroutines-core-js-1.3.3.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-js/1.3.61/7e6dc566af3ebaa2cf6abf227bee7a5c87d54d09/kotlin-stdlib-js-1.3.61.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.61/65abb71d5afb850b68be03987b08e2c864ca3110/kotlin-stdlib-common-1.3.61.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="asoft-rx_jsMain" scope="TEST" />
-    <orderEntry type="module" module-name="asoft-rx_commonTest" scope="TEST" production-on-test="" />
+    <orderEntry type="module-library" scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-common/1.3.3/fc4802d1a6ff891f812cbab9e3c00dfb26011bc0/kotlinx-coroutines-core-common-1.3.3.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-js/1.3.3/bc82a570c5f582ed1b9819596718c4a74d873ab3/kotlinx-coroutines-core-js-1.3.3.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-js/1.3.61/7e6dc566af3ebaa2cf6abf227bee7a5c87d54d09/kotlin-stdlib-js-1.3.61.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.61/65abb71d5afb850b68be03987b08e2c864ca3110/kotlin-stdlib-common-1.3.61.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
   <component name="TestModuleProperties" production-module="asoft-rx_jsMain" />
 </module>
