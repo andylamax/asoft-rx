@@ -1,9 +1,9 @@
 buildscript {
     ext {
         kotlin_version = "1.3.61"
-        asoft_test_version = "4.1.0"
-        coroutines_version = "1.3.3"
-        android_build_tools_version = "3.5.2"
+        asoft_test_version = "4.2.0"
+        coroutines_version = "1.3.4"
+        android_build_tools_version = "3.6.0"
     }
 
     repositories {
@@ -14,26 +14,18 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:$android_build_tools_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
     }
 }
 
 plugins {
-    id 'kotlin-multiplatform' version '1.3.61'
-}
-
-tasks.whenTaskAdded { task ->
-    if (task.name.contains("install")) {
-//        task.enabled = false
-    }
+    id 'kotlin-multiplatform' version '1.3.70'
 }
 
 group 'tz.co.asoft'
-version "6.1.0"
+version "6.2.0"
 
 apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
-apply plugin: 'kotlinx-serialization'
 
 android {
     compileSdkVersion 28
@@ -93,10 +85,10 @@ kotlin {
 //        nodejs()
         compilations.all {
             tasks[compileKotlinTaskName].kotlinOptions {
-                kotlinOptions.metaInfo = true
-                kotlinOptions.sourceMap = true
-                kotlinOptions.moduleKind = 'commonjs'
-                kotlinOptions.main = "call"
+                metaInfo = true
+                sourceMap = true
+                moduleKind = 'commonjs'
+                main = "call"
             }
         }
     }
