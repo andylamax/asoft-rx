@@ -1,53 +1,10 @@
 plugins {
     kotlin("multiplatform")
-    kotlin("plugin.serialization")
     id("com.android.library")
     id("maven-publish")
 }
 
-group = "tz.co.asoft"
-version = rootProject.version
-
-repositories {
-    google()
-    jcenter()
-    maven(url = "https://jitpack.io")
-    maven(url = "https://dl.bintray.com/kotlin/kotlin-eap")
-}
-
-android {
-    compileSdkVersion(28)
-    defaultConfig {
-        minSdkVersion(1)
-        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
-    }
-
-    sourceSets {
-        val main by getting {
-            manifest.srcFile("src/androidMain/AndroidManifest.xml")
-            resources.srcDirs("src/androidMain/resources")
-        }
-    }
-
-    lintOptions {
-
-    }
-
-    buildTypes {
-        val release by getting {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-}
+android { configureAndroid() }
 
 kotlin {
     android {
